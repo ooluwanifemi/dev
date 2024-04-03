@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # A simple Bash script for beginners
 
 echo "Welcome to the Simple Bash Script!"
