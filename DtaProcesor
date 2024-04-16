@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Print a header for the script output
+echo "Data Processing Script"
+echo "----------------------"
+
+# Display the contents of the data file
+echo "Displaying all data entries:"
+cat data.txt
+echo "----------------------"
+
+# Use grep to find entries that contain 'Apple'
+echo "Searching for Apple in the data:"
+grep 'Apple' data.txt
+echo "----------------------"
+
+# Use awk to display prices only
+echo "Listing all prices:"
+awk -F', ' '{print $2}' data.txt
+echo "----------------------"
+
+# Use sed to change the format of the line, making it more readable
+echo "Formatted data entries:"
+sed 's/: / - /g; s/, Price:/, Price:/g' data.txt
+echo "----------------------"
+
+# Count the total number of entries
+echo "Counting total number of items:"
+cat data.txt | wc -l
+echo "----------------------"
+
+# Use awk to sum the quantities of all items
+echo "Total quantity of all items:"
+awk -F', ' '{split($3,a,": "); sum += a[2]} END {print sum}' data.txt
+echo "----------------------"
