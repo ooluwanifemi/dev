@@ -1,0 +1,5 @@
+Item001: Apple, Price: $1, Quantity: 10
+Item002: Banana, Price: $0.5, Quantity: 20
+Item003: Cherry, Price: $3, Quantity: 15
+Item004: Date, Price: $2, Quantity: 25
+Item005: Elderberry, Price: $1.5, Quantity: 5
